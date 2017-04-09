@@ -20,10 +20,12 @@ class CustomD3Component extends D3Component {
 
   initialize(node, props) {
     // node is a <div> container,
-    d3.select(node)
-      .append('svg')
+    const svg = d3.select(node).append('svg');
 
     //...
+
+    // do something with the data passed in
+    svg.data(props.data);
   }
 
   update(props) {
@@ -33,6 +35,11 @@ class CustomD3Component extends D3Component {
 }
 
 module.exports = CustomD3Component;
+```
+
+In .idl file:
+```
+[CustomD3Component data:someArrayOfData /]
 ```
 
 
@@ -49,6 +56,31 @@ This function is called any time the props object changes. Use this function e.g
 your component when bound data changes.
 
 ## Options
+
+Anything you pass to your component will be available on the props object.
+E.g.
+
+In .idl file:
+```
+[CustomD3Component someProperty:"abc" someOtherProperty:"xyz"  /]
+```
+
+```jsx
+class CustomD3Component extends D3Component {
+  initialize(node, props) {
+    // props:
+    // {
+    //  someProperty: "abc",
+    //  someOtherProperty: "xyz"
+    // }
+
+    //...
+  }
+  update(props){/**/}
+}
+
+module.exports = CustomD3Component;
+```
 
 ### className
 
