@@ -3,7 +3,6 @@ const ReactDOM = require('react-dom');
 const IdyllComponent = require('idyll-component');
 
 class D3Component extends IdyllComponent {
-
   componentDidMount() {
     if (super.componentDidMount) {
       super.componentDidMount();
@@ -29,9 +28,8 @@ class D3Component extends IdyllComponent {
   }
 
   render() {
-    const drawNode = this.props.canvas ? 'canvas' : 'svg';
     const { className, style, width, height } = this.props;
-    return React.createElement(drawNode, { className, style, width, height });
+    return React.createElement('div', { className, style, width, height });
   }
 }
 
