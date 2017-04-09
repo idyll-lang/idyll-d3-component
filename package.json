@@ -1,0 +1,35 @@
+{
+  "name": "idyll-d3-component",
+  "version": "1.0.0",
+  "description": "Component base class to make it easy to integrate d3 into Idyll projects",
+  "main": "lib.js",
+  "scripts": {
+    "build": "babel index.js -o lib.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idyll-lang/idyll-d3-component.git"
+  },
+  "keywords": [
+    "idyll"
+  ],
+  "author": "Matthew Conlen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idyll-lang/idyll-d3-component/issues"
+  },
+  "homepage": "https://github.com/idyll-lang/idyll-d3-component#readme",
+  "dependencies": {
+    "idyll-component": "^1.0.5"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0"
+  }
+}
