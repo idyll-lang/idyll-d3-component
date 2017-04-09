@@ -17,8 +17,10 @@ const D3Component = require('idyll-d3-component');
 
 class CustomD3Component extends D3Component {
 
-  initialize(svgOrCanvasNode, props) {
-
+  initialize(node, props) {
+    // node is a DOM element, either a <canvas> or <svg>
+    // it will be an SVG by default, but pass the property
+    // canvas: true  to use a canvas element instead.
   }
 
   update(props) {
@@ -42,6 +44,8 @@ In order to use this component, you need to define two methods, `initialize` and
 The initialize function is called only once when your component first mounts. Use this function to
 create any necessary DOM elements and render your component with the initially provided properties.
 
+`node` is a DOM element, either `<canvas>` or `<svg>`. It will be an SVG by default, but pass the property
+`{ "canvas": true }`  to use a canvas element instead.
 
 ### `update(props)`
 
