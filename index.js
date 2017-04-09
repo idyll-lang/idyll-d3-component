@@ -28,8 +28,8 @@ class D3Component extends IdyllComponent {
   }
 
   render() {
-    const { className, style, width, height } = this.props;
-    return React.createElement('div', { className, style, width, height });
+    const { className, style } = this.props;
+    return React.createElement('div', { className, style });
   }
 }
 
