@@ -50,14 +50,9 @@ your component when bound data changes.
 
 ## Options
 
-### style, className
+### className
 
-A style object can optionally be provided, as can a class name.
-
-Sets the CSS style:
-```
-[CustomD3Component style:`{width: "100%"}` /]
-```
+A css class name can be provided.
 
 Sets the className:
 ```
