@@ -12,7 +12,6 @@ npm install --save idyll-d3-component
 ## Usage
 
 ```jsx
-const React = require('react');
 const D3Component = require('idyll-d3-component');
 const d3 = require('d3');
 
