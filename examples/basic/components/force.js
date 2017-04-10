@@ -1,13 +1,14 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const D3Component = require('./d3');
+const D3Component = require('../../..');
 const d3 = require('d3');
 
 class Force extends D3Component {
 
-  initialize(canvas, props) {
+  initialize(node, props) {
+    const canvas = d3.select(node).append('canvas').node();
     const context = canvas.getContext("2d");
-    const width = canvas.offsetWidth;
+    const width = node.getBoundingClientRect().width;
     const height = width * 0.9;
     canvas.width = width;
     canvas.height = height;
@@ -17,6 +18,7 @@ class Force extends D3Component {
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
 
+    var self = this;
     d3.json("https://rawgit.com/mbostock/ad70335eeef6d167bc36fd3c04378048/raw/df541a01e850c6073ece4516fcd74ea1bae080ab/miserables.json", function(error, graph) {
       if (error) throw error;
 
@@ -45,6 +47,7 @@ class Force extends D3Component {
 
         context.beginPath();
         graph.nodes.forEach(drawNode);
+        context.fillStyle = self.props.nodeColor;
         context.fill();
         context.strokeStyle = "#fff";
         context.stroke();
@@ -53,6 +56,9 @@ class Force extends D3Component {
       function dragsubject() {
         return simulation.find(d3.event.x, d3.event.y);
       }
+
+
+      self.tick = ticked;
     });
 
     function dragstarted() {
@@ -84,9 +90,13 @@ class Force extends D3Component {
 
   }
 
-  update(props) {
+  update() {
+    this.tick();
   }
-
 }
+
+Force.defaultProps = {
+  nodeColor: '#000'
+};
 
 module.exports = Force;

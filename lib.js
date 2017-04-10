@@ -11,13 +11,9 @@ class D3Component extends IdyllComponent {
     this.initialize(node, this.props);
   }
 
-  initialize() {
-    console.warn('initialize() not defined on D3Component.');
-  }
+  initialize() {}
 
-  update() {
-    console.warn('update() not defined on D3Component.');
-  }
+  update() {}
 
   componentWillReceiveProps(nextProps) {
     this.update(nextProps);

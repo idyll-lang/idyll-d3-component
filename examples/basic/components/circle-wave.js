@@ -1,10 +1,10 @@
-const D3Component = require('./d3');
+const D3Component = require('../../..');
 const d3 = require('d3');
 
 class CircleWave extends D3Component {
 
   initialize(node, props) {
-    var svg = d3.select(node);
+    var svg = d3.select(node).append('svg');
     var width = node.getBoundingClientRect().width;
     var height = width;
 

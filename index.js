@@ -12,11 +12,9 @@ class D3Component extends IdyllComponent {
   }
 
   initialize() {
-    console.warn('initialize() not defined on D3Component.');
   }
 
   update() {
-    console.warn('update() not defined on D3Component.');
   }
 
   componentWillReceiveProps(nextProps) {
