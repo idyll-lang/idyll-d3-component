@@ -1,0 +1,38 @@
+[meta title:"d3 + Idyll" description:"An introduction to using d3 and Idyll" /]
+
+[IdyllLogo /]
+
+[Header
+  title:"Using d3 with Idyll"
+  subtitle:"An introduction to using the data visualization library with Idyll"
+  author:"Matthew Conlen"
+  authorLink:"https://twitter.com/mathisonian" /]
+
+[div className:"inset" style:`{maxWidth: 150, margin: '0 auto'}`]
+[a href:"https://bl.ocks.org/mbostock/2d466ec3417722e3568cd83fc35338e3"][CircleWave style:`{width: "100%"}`  /][/a]
+[/div]
+
+
+This is a guide for those who are familiar with d3 and wish to use d3 in the idiomatic way,
+as opposed to relying on React to handle DOM updates.
+
+Idyll defines a custom `D3Component` that you can use to create a custom d3 component.
+To use it, create a class that extends from it, and implements two methods: `initialize`,
+and `update`.
+
+[gist gist:"e583bc2d6143ab867bab73701762af00" file:"idyll-d3.jsx" /]
+
+and in your `index.idl` file, instantiate the component like this:
+
+[gist gist:"e583bc2d6143ab867bab73701762af00" file:"d3.idl" /]
+
+### iniatialize(node, props)
+
+The initialize function is called only once when your component first mounts. Use this function to
+create any necessary DOM elements and render your component with the initially provided properties.
+
+### update(props)
+
+This function is called any time the props object changes. Use this function e.g. to update
+your component when bound data changes.
+
