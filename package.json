@@ -1,6 +1,6 @@
 {
   "name": "idyll-d3-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Component base class to make it easy to integrate d3 into Idyll projects",
   "main": "lib.js",
   "scripts": {
