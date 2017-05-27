@@ -26,6 +26,8 @@ and in your `index.idl` file, instantiate the component like this:
 
 [gist gist:"e583bc2d6143ab867bab73701762af00" file:"d3.idl" /]
 
+Any properties provided will be available on the props object in the component.
+
 ### iniatialize(node, props)
 
 The initialize function is called only once when your component first mounts. Use this function to
@@ -41,8 +43,8 @@ your component when bound data changes.
 
 The circle at the top of this post is adapted
 from [link text:"Mike Bostock's block" href:"https://bl.ocks.org/mbostock/2d466ec3417722e3568cd83fc35338e3" /],
-which was inspired by [link text:"Dave Whyte's circle wave" href:"" /]. You might be
-more familiar with Dave Whyte's handle, [link href:"https://twitter.com/beesandbombs" text:"@beesandbombs" /].
+which was inspired by [link text:"Dave Whyte's circle wave" href:"" /] (Dave Whyte often publishes
+under the handle [link href:"https://twitter.com/beesandbombs" text:"@beesandbombs" /]).
 
 To use the block, I can just stick the code into the `initialize` function. Since this doesn't take any user
 input or have dynamic properties, I can omit the `update` function altogether.

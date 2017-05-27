@@ -47,7 +47,7 @@ class Force extends D3Component {
 
         context.beginPath();
         graph.nodes.forEach(drawNode);
-        context.fillStyle = self.props.nodeColor;
+        context.fillStyle = (self._props || self.props).nodeColor;
         context.fill();
         context.strokeStyle = "#fff";
         context.stroke();
@@ -90,7 +90,8 @@ class Force extends D3Component {
 
   }
 
-  update() {
+  update(props) {
+    this._props = props;
     this.tick();
   }
 }
