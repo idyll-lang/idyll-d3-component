@@ -12,10 +12,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var IdyllComponent = require('idyll-component');
 
-var D3Component = function (_IdyllComponent) {
-  _inherits(D3Component, _IdyllComponent);
+var D3Component = function (_React$Component) {
+  _inherits(D3Component, _React$Component);
 
   function D3Component() {
     _classCallCheck(this, D3Component);
@@ -60,6 +59,6 @@ var D3Component = function (_IdyllComponent) {
   }]);
 
   return D3Component;
-}(IdyllComponent);
+}(React.Component);
 
 module.exports = D3Component;
