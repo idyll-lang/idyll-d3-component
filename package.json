@@ -1,6 +1,6 @@
 {
   "name": "idyll-d3-component",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Component base class to make it easy to integrate d3 into Idyll projects",
   "main": "lib.js",
   "scripts": {
@@ -20,8 +20,7 @@
     "url": "https://github.com/idyll-lang/idyll-d3-component/issues"
   },
   "homepage": "https://github.com/idyll-lang/idyll-d3-component#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
