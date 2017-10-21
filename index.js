@@ -2,20 +2,6 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 
 class D3Component extends React.Component {
-  componentDidMount() {
-    if (super.componentDidMount) {
-      super.componentDidMount();
-    }
-    const node = ReactDOM.findDOMNode(this);
-    this.initialize(node, this.props);
-  }
-
-  initialize() {
-  }
-
-  update() {
-  }
-
   componentWillReceiveProps(nextProps) {
     this.update(nextProps);
   }
@@ -26,7 +12,9 @@ class D3Component extends React.Component {
 
   render() {
     const { className, style } = this.props;
-    return React.createElement('div', { className, style });
+    return (
+      <div ref={(node) => { this.initialize(node, this.props) }} className={className} style={Object.assign({ width: '100%'}, style)} />
+    );
   }
 }
 
