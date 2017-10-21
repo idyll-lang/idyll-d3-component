@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/idyll-lang/idyll-d3-component#readme",
   "dependencies": {
-    "idyll-component": "^1.0.5"
   },
   "peerDependencies": {
     "react": "^15.4.2",

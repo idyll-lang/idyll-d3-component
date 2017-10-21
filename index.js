@@ -1,8 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const IdyllComponent = require('idyll-component');
 
-class D3Component extends IdyllComponent {
+class D3Component extends React.Component {
   componentDidMount() {
     if (super.componentDidMount) {
       super.componentDidMount();
