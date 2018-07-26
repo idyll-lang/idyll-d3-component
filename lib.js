@@ -23,7 +23,7 @@ var D3Component = function (_React$Component) {
   _createClass(D3Component, [{
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      this.update(nextProps);
+      this.update(nextProps, this.props);
     }
   }, {
     key: 'shouldComponentUpdate',
