@@ -3,7 +3,7 @@ const ReactDOM = require('react-dom');
 
 class D3Component extends React.Component {
   componentWillReceiveProps(nextProps) {
-    this.update(nextProps);
+    this.update(nextProps, this.props);
   }
 
   shouldComponentUpdate() {

@@ -27,7 +27,7 @@ class CustomD3Component extends D3Component {
     svg.data(props.data);
   }
 
-  update(props) {
+  update(props, oldProps) {
     // ...
   }
 
@@ -49,7 +49,7 @@ In order to use this component, you need to define two methods, `initialize` and
 The initialize function is called only once when your component first mounts. Use this function to
 create any necessary DOM elements and render your component with the initially provided properties.
 
-### `update(props)`
+### `update(props, oldProps)`
 
 This function is called any time the props object changes. Use this function e.g. to update
 your component when bound data changes.
@@ -75,7 +75,7 @@ class CustomD3Component extends D3Component {
 
     //...
   }
-  update(props){/**/}
+  update(props, oldProps){/**/}
 }
 
 module.exports = CustomD3Component;
